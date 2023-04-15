@@ -6,8 +6,13 @@
 /*   By: jfilguei <jfilguei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 19:00:40 by jfilguei          #+#    #+#             */
-/*   Updated: 2023/04/12 20:53:42 by jfilguei         ###   ########.fr       */
+/*   Updated: 2023/04/14 22:18:51 by jfilguei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_isalnum(int c)
+{
+	return (ft_isalpha(c) || ft_isdigit(c));
+}

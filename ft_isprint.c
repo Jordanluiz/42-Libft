@@ -6,8 +6,13 @@
 /*   By: jfilguei <jfilguei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 18:59:13 by jfilguei          #+#    #+#             */
-/*   Updated: 2023/04/12 20:54:24 by jfilguei         ###   ########.fr       */
+/*   Updated: 2023/04/15 22:12:34 by jfilguei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_isprint(int c)
+{
+	return (c >= 32 && c <= 126);
+}

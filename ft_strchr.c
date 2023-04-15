@@ -6,8 +6,13 @@
 /*   By: jfilguei <jfilguei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 19:00:05 by jfilguei          #+#    #+#             */
-/*   Updated: 2023/04/12 20:59:03 by jfilguei         ###   ########.fr       */
+/*   Updated: 2023/04/16 00:26:07 by jfilguei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char	*ft_strchr(const char *s, int c)
+{
+	return (ft_memchr(s, c, ft_strlen(s) + 1));
+}

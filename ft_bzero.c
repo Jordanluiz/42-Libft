@@ -6,8 +6,13 @@
 /*   By: jfilguei <jfilguei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 18:57:41 by jfilguei          #+#    #+#             */
-/*   Updated: 2023/04/12 20:53:39 by jfilguei         ###   ########.fr       */
+/*   Updated: 2023/04/15 23:11:29 by jfilguei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
+{
+	ft_memset(s, 0, n);
+}
