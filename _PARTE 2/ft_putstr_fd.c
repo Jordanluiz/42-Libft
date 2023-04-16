@@ -6,7 +6,19 @@
 /*   By: jfilguei <jfilguei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 17:58:45 by jfilguei          #+#    #+#             */
-/*   Updated: 2023/04/16 17:58:46 by jfilguei         ###   ########.fr       */
+/*   Updated: 2023/04/16 19:35:36 by jfilguei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	ft_putstr_fd(char *s, int fd)
+{
+	int	i;
+
+	if (!s || fd < 0)
+		return ;
+	i = 0;
+	while (s[i])
+		ft_putchar_fd(s[i++], fd);
+}

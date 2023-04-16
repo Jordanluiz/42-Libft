@@ -6,7 +6,14 @@
 /*   By: jfilguei <jfilguei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 17:58:53 by jfilguei          #+#    #+#             */
-/*   Updated: 2023/04/16 17:58:54 by jfilguei         ###   ########.fr       */
+/*   Updated: 2023/04/16 19:29:41 by jfilguei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	ft_putchar_fd(char c, int fd)
+{
+	if (fd >= 0)
+		write(fd, &c, 1);
+}

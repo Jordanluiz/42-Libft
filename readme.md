@@ -37,7 +37,7 @@
 ### ft_strjoin 	
 ### ft_strmapi 	
 ### ft_strtrim 	
-### ft_substr 	
+### ft_substr 
 
 ## Bonus Part / 9 	
 
