@@ -6,7 +6,7 @@
 /*   By: jfilguei <jfilguei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 18:42:49 by jfilguei          #+#    #+#             */
-/*   Updated: 2023/04/16 00:26:58 by jfilguei         ###   ########.fr       */
+/*   Updated: 2023/04/17 19:05:46 by jfilguei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <unistd.h>
 # include <ctype.h>
 
+//part1
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
 int		ft_isdigit(int c);
@@ -42,5 +43,21 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+
+//part2
+char	*ft_itoa(int n);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	**ft_split(char const *s, char c);
+void	ft_putnbr_fd(int nb, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+
+//bonus
+
 
 #endif
