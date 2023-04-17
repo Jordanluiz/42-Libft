@@ -6,11 +6,22 @@
 /*   By: jfilguei <jfilguei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 17:58:43 by jfilguei          #+#    #+#             */
-/*   Updated: 2023/04/17 22:04:38 by jfilguei         ###   ########.fr       */
+/*   Updated: 2023/04/17 23:55:47 by jfilguei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void	*free_matrix(char **mat)
+{
+	int	i;
+
+	i = 0;
+	while (mat[i])
+		free(mat[i++]);
+	free(mat);
+	return (NULL);
+}
 
 static size_t	len_separator(char const *str, char sep)
 {
@@ -42,17 +53,6 @@ static int	num_words(char const *s, char sep)
 	return (n);
 }
 
-static void	*ft_delete_matrix(char **mat)
-{
-	int	i;
-
-	i = 0;
-	while (mat[i])
-		free(mat[i++]);
-	free(mat);
-	return (NULL);
-}
-
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
@@ -74,7 +74,7 @@ char	**ft_split(char const *s, char c)
 			i++;
 		words[k] = ft_substr(s, i, len_separator(s + i, c));
 		if (!words[k])
-			return (ft_delete_matrix(words));
+			return (free_matrix(words));
 		i += len_separator(s + i, c);
 	}
 	words[num] = NULL;
