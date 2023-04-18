@@ -6,7 +6,7 @@
 /*   By: jfilguei <jfilguei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 17:59:07 by jfilguei          #+#    #+#             */
-/*   Updated: 2023/04/18 00:12:58 by jfilguei         ###   ########.fr       */
+/*   Updated: 2023/04/18 23:02:05 by jfilguei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*lst2;
 	t_list	*node;
+	t_list	*lst_map;
 
-	lst2 = NULL;
+	lst_map = NULL;
 	if (!lst || !f || !del)
 		return (NULL);
 	while (lst != NULL)
@@ -28,8 +28,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			ft_lstclear(&lst, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&lst2, node);
+		ft_lstadd_back(&lst_map, node);
 		lst = lst->next;
 	}
-	return (lst2);
+	return (lst_map);
 }

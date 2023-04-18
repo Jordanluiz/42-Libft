@@ -6,7 +6,7 @@
 /*   By: jfilguei <jfilguei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 17:59:01 by jfilguei          #+#    #+#             */
-/*   Updated: 2023/04/18 00:12:30 by jfilguei         ###   ########.fr       */
+/*   Updated: 2023/04/18 22:19:32 by jfilguei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int		i;
+	int		size;
 
-	i = 0;
+	size = 0;
 	while (lst != NULL)
 	{
 		lst = lst->next;
-		i++;
+		size++;
 	}
-	return (i);
+	return (size);
 }
