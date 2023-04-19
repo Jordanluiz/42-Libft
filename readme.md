@@ -20,6 +20,7 @@ Verifica se o caracter pode ser impresso.
 ### ft_memchr 
 Procura a primeira ocorrência do caractere c nos primeiros n bytes da string apontada por s. Retorna um ponteiro para o byte correspondente.
 ### ft_memcmp 
+Compara os primeiros n bytes da memória de s1 e de memória s2. Retorn < 0, s1 é menor. retorn > 0, s2 é menor. Return = 0.
 ### ft_memcpy 
 Copia n caracteres da memória de src para a memória de dest.
 ### ft_memmove 
@@ -29,8 +30,7 @@ Copia o caractere c para os primeiros n caracteres da string apontada por s.
 ### ft_strchr 
 Procura a primeira ocorrência do caractere c na string apontada por s.
 ### ft_strdup 
-Retorna um ponteiro para uma string(criado com malloc), que é 
-  duplicata da string apontada por s.
+Retorna um ponteiro para uma string(criado com malloc), que é duplicata da string apontada por s.
 ### ft_strlcat 
 Acrescenta a string src ao final da string dst.
 ### ft_strlcpy 
