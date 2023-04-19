@@ -6,7 +6,7 @@
 /*   By: jfilguei <jfilguei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 19:00:09 by jfilguei          #+#    #+#             */
-/*   Updated: 2023/04/12 20:55:15 by jfilguei         ###   ########.fr       */
+/*   Updated: 2023/04/19 22:27:53 by jfilguei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	int	i;
 
-	i = ft_strlen(s);
-	while (1)
+	i = -1;
+	while (s[++i])
+		;
+	while (i >= 0)
 	{
-		if (s[i] == c)
-			return ((char *)s + i);
-		if (i == 0)
-			return (NULL);
+		if (s[i] == (unsigned char)c)
+			return (&((char *)s)[i]);
 		i--;
 	}
+	return (0);
 }
