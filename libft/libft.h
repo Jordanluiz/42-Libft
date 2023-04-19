@@ -6,7 +6,7 @@
 /*   By: jfilguei <jfilguei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 18:42:49 by jfilguei          #+#    #+#             */
-/*   Updated: 2023/04/19 00:57:45 by jfilguei         ###   ########.fr       */
+/*   Updated: 2023/04/19 19:44:36 by jfilguei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,16 +106,47 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 //####               Parte 2               ####
 //#############################################
 
+/**Aloca memória e retorna uma string representando o inteiro recebido
+ * como argumento. Números negativos devem ser tratados.*/
 char	*ft_itoa(int n);
+
+/**Aloca memória e retorna uma nova string, que é o resultado da
+ * concatenação de 's1' e 's2'.*/
 char	*ft_strjoin(char const *s1, char const *s2);
+
+/**Aloca memória e retorna uma cópia de 's1' com os caracteres
+ * especificados em 'set' removidos do início e do final da string.*/
 char	*ft_strtrim(char const *s1, char const *set);
+
+/**Aloca na memória e retorna uma substring da string 's'.
+ * A substring começa no índice 'start' e tem tamanho máximo 'len'*/
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+/**Aplica a função 'f' a cada caractere da string 's', passando seu índice como
+ * primeiro argumento para criar uma nova string (com malloc) resultante de
+ * aplicações sucessivas de 'f'.*/
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+/**Aloca memória e retorna um array de strings obtido dividindo 's' usando o
+ * caractere 'c' como delimitador. 
+ * A matriz deve terminar com um ponteiro NULL.*/
 char	**ft_split(char const *s, char c);
+
+/**Emite o inteiro 'n' para o descritor de arquivo fornecido.*/
 void	ft_putnbr_fd(int nb, int fd);
+
+/**Emite a string 's' para o descritor de arquivo fornecido.*/
 void	ft_putstr_fd(char *s, int fd);
+
+/**Emite o caractere 'c' para o descritor de arquivo fornecido.*/
 void	ft_putchar_fd(char c, int fd);
+
+/**Emite a string 's' para o descritor de arquivo seguido por uma nova linha.*/
 void	ft_putendl_fd(char *s, int fd);
+
+/**Aplica a função 'f' em cada caractere da string passada como argumento,
+passando seu índice como primeiro argumento. Cada caractere é passado
+por endereço para 'f' para ser modificado se necessário*/
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 //#############################################
