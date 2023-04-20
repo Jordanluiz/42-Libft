@@ -6,11 +6,11 @@
 #    By: jfilguei <jfilguei@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/12 18:42:11 by jfilguei          #+#    #+#              #
-#    Updated: 2023/04/20 00:10:05 by jfilguei         ###   ########.fr        #
+#    Updated: 2023/04/20 19:29:06 by jfilguei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft
+NAME = libft.a
 
 CC = gcc
 
@@ -51,9 +51,3 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
-
-rebonus: fclean bonus
-
-norm:
-	norminette -R CheckForbiddenSourceHeader *.c
-	norminette -R CheckDefine *.h
